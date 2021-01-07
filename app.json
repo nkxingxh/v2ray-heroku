@@ -11,12 +11,16 @@
        "description": "默认latest安装最新版本V2Ray （输入V2Ray 版本号 进行指定版本安装。例如：3.22)",
        "value": "latest"
      }, 
-    "UUID": {
+    "protocol": {
        "description": "Vmess协议默认UUID，请输入自己的UUID，（http://www.uuid.online/ 在线生成UUID），客户端需要此参数",
        "value": "4890bd47-5180-4b1c-9a5d-3ef686543112"
      },
+    "UUID": {
+       "description": "VMess/VLESS协议默认UUID，请输入自己的UUID，（http://www.uuid.online/ 在线生成UUID），客户端需要此参数",
+       "value": "4890bd47-5180-4b1c-9a5d-3ef686543112"
+     },
     "AlterID": {
-       "description": "AlterID大小，数值越大内存占用越高，客户端需要此参数",
+       "description": "AlterID，数值越大内存占用越高，客户端需要此参数(仅VMess需要)",
        "value": "64"
      }, 
     "V2_Path": {
