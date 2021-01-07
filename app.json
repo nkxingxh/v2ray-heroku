@@ -12,8 +12,8 @@
        "value": "latest"
      }, 
     "protocol": {
-       "description": "Vmess协议默认UUID，请输入自己的UUID，（http://www.uuid.online/ 在线生成UUID），客户端需要此参数",
-       "value": "4890bd47-5180-4b1c-9a5d-3ef686543112"
+       "description": "服务器协议，有vmess/vless",
+       "value": "vmess"
      },
     "UUID": {
        "description": "VMess/VLESS协议默认UUID，请输入自己的UUID，（http://www.uuid.online/ 在线生成UUID），客户端需要此参数",
