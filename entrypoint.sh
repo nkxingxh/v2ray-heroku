@@ -5,6 +5,11 @@ if [[ -z "${VER}" ]]; then
 fi
 echo ${VER}
 
+if [[ -z "${protocol}" ]]; then
+  protocol="vmess"
+fi
+echo ${protocol}
+
 if [[ -z "${UUID}" ]]; then
   UUID="ffc17112-b755-499d-be9f-91a828bd3197"
 fi
@@ -64,7 +69,7 @@ cat <<-EOF > /v2raybin/config.json
         "loglevel":"warning"
     },
     "inbound":{
-        "protocol":"vmess",
+        "protocol":"${protocol}",
         "listen":"127.0.0.1",
         "port":2333,
         "settings":{
