@@ -11,22 +11,22 @@ fi
 echo ${protocol}
 
 if [[ -z "${UUID}" ]]; then
-  UUID="ffc17112-b755-499d-be9f-91a828bd3197"
+  UUID="770742b4-b3ee-4edd-b560-480d05da50a1"
 fi
 echo ${UUID}
 
 if [[ -z "${AlterID}" ]]; then
-  AlterID="64"
+  AlterID="24"
 fi
 echo ${AlterID}
 
 if [[ -z "${V2_Path}" ]]; then
-  V2_Path="/static"
+  V2_Path="/stream"
 fi
 echo ${V2_Path}
 
 if [[ -z "${V2_QR_Path}" ]]; then
-  V2_QR_Path="qr_img"
+  V2_QR_Path="ch874gek"
 fi
 echo ${V2_QR_Path}
 
@@ -79,11 +79,12 @@ cat <<-EOF > /v2raybin/config.json
                     "level":1,
                     "alterId":${AlterID}
                 }
-            ]
+            ],
+            "disableInsecureEncryption": ${disableInsecureEncryption}
         },
         "streamSettings":{
-            "network":"ws",
-            "wsSettings":{
+            "network":"${network}",
+            "${network}Settings":{
                 "path":"${V2_Path}"
             }
         }

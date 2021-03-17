@@ -4,39 +4,47 @@
   "keywords": ["V2ray"],
   "env": {
     "AppName": {
-       "description": "请输入最上方填写的App Name，用于生成二维码和订阅链接，如果不想生成输入no",
-       "value": "no"
-     },
+      "description": "请输入最上方填写的App Name，用于生成二维码和订阅链接，如果不想生成输入no",
+      "value": "no"
+    },
     "VER": {
-       "description": "默认latest安装最新版本V2Ray （输入V2Ray 版本号 进行指定版本安装。例如：3.22)",
-       "value": "latest"
-     }, 
+      "description": "默认latest安装最新版本V2Ray （输入V2Ray 版本号 进行指定版本安装。例如：3.22)",
+      "value": "latest"
+    },
     "protocol": {
-       "description": "服务器协议，有vmess/vless",
-       "value": "vmess"
-     },
+      "description": "protocol 服务器协议, 支持 vmess/vless",
+      "value": "vmess"
+    },
     "UUID": {
-       "description": "VMess/VLESS协议默认UUID，请输入自己的UUID，（http://www.uuid.online/ 在线生成UUID），客户端需要此参数",
-       "value": "4890bd47-5180-4b1c-9a5d-3ef686543112"
-     },
+      "description": "VMess/VLESS 协议UUID (http://www.uuid.online/ 在线生成UUID)",
+      "value": "770742b4-b3ee-4edd-b560-480d05da50a1"
+    },
     "AlterID": {
-       "description": "AlterID，数值越大内存占用越高，客户端需要此参数(仅VMess需要)",
-       "value": "64"
-     }, 
+      "description": "AlterID, 数值越大内存占用越高，客户端需要此参数 (仅VMess需要该参数)",
+      "value": "24"
+    },
+    "network": {
+      "description": "network 传输协议, 支持 http/ws",
+      "value": "ws"
+    },
     "V2_Path": {
-       "description": "Path路径，默认/static，为了安全你也可以使用uuid替换static，/不能少，客户端需要此参数",
-       "value": "/static"
-     },
+      "description": "Path 路径 (/不能少)",
+      "value": "/stream"
+    },
+    "disableInsecureEncryption": {
+      "description": "disableInsecureEncryption 禁用不安全加密 (true/false)",
+      "value": "true"
+    },
     "V2_QR_Path": {
-       "description": "二维码和订阅地址路径，默认qr_img，为了保密性你也可以使用uuid,但是不能与V2_Path相同。如AppName变量为no，此变量没有作用",
-       "value": "qr_img"
-     },   
+      "description": "二维码和订阅地址路径，默认qr_img，为了保密性你也可以使用uuid,但是不能与V2_Path相同。如AppName变量为no，此变量没有作用",
+      "value": "ch874gek"
+    },
     "V2RAY_RAY_BUFFER_SIZE": {
-       "description": "每个连接的缓存大小，单位MB，默认10。如果感觉有断流现象，请考虑将缓存改成1",
-       "value": "10"
-     }
+      "description": "每个连接的缓存大小，单位MB，默认10。如果感觉有断流现象，请考虑将缓存改成1",
+      "value": "10"
+    }
   },
   "website": "https://github.com/ki8852/v2ray-heroku-undone",
   "repository": "https://github.com/ki8852/v2ray-heroku-undone",
   "stack": "container"
- }
+}
